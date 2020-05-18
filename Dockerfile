@@ -18,7 +18,3 @@ RUN update-alternatives --set python /usr/bin/python3.7
 RUN curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
     python3.7 get-pip.py --force-reinstall && \
     rm get-pip.py
-WORKDIR /app
-COPY app /app
-COPY requirements.txt /app/req.txt
-RUN pip3 install -r req.txt -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
