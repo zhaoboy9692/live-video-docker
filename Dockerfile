@@ -18,4 +18,5 @@ RUN update-alternatives --set python /usr/bin/python3.7
 RUN curl -s https://bootstrap.pypa.io/get-pip.py -o get-pip.py && \
     python3.7 get-pip.py --force-reinstall && \
     rm get-pip.py
-RUN python3.7 -m pip install python-librtmp==0.3.0 -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN python3.7 -m pip install python-librtmp==0.3.0 pyppeteer==0.2.2 -i http://mirrors.aliyun.com/pypi/simple/ --trusted-host mirrors.aliyun.com
+RUN   pyppeteer-install
